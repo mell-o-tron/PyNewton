@@ -64,6 +64,7 @@ def runPG(f, f1, x, scale, stop):
     if f1(x) == 0:
         print("f'(x) = 0")
         pygame.quit()
+        return
         
     while abs(f(x)) > stop:
         x = newton_iter(f, f1, x, screen, winsize, 1, scale)
